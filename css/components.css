@@ -54,3 +54,14 @@ input:required:invalid,
 textarea:required:invalid {
   border: 2px solid #e74c3c;
 }
+
+input:required:valid,
+textarea:required:valid {
+  border: 2px solid var(--color-primary);
+}
+
+input:required:valid,
+textarea:required:valid {
+  border: 2px solid var(--color-primary);
+}
+

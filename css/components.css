@@ -49,3 +49,24 @@
 .fav-checkbox:checked + .fav-label {
   color: #e74c3c;
 }
+
+input:required:invalid,
+textarea:required:invalid {
+  border: 2px solid #e74c3c;
+}
+
+input:required:valid,
+textarea:required:valid {
+  border: 2px solid var(--color-primary);
+}
+
+.icono-red {
+  display: inline-block;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: transform 0.3s;
+}
+
+.icono-red:hover {
+  transform: scale(1.1);
+}

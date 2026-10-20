@@ -45,3 +45,10 @@
   overflow-x: auto;
   gap: 15px;
 }
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}

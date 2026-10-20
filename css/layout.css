@@ -33,3 +33,9 @@
   grid-template-columns: 1fr;
   gap: 15px;
 }
+
+.valores {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}

@@ -39,3 +39,9 @@
   display: flex;
   gap: 15px;
 }
+
+.carrusel {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+}

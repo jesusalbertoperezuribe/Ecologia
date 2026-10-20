@@ -49,3 +49,8 @@
 .fav-checkbox:checked + .fav-label {
   color: #e74c3c;
 }
+
+input:required:invalid,
+textarea:required:invalid {
+  border: 2px solid #e74c3c;
+}

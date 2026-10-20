@@ -60,8 +60,13 @@ textarea:required:valid {
   border: 2px solid var(--color-primary);
 }
 
-input:required:valid,
-textarea:required:valid {
-  border: 2px solid var(--color-primary);
+.icono-red {
+  display: inline-block;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: transform 0.3s;
 }
 
+.icono-red:hover {
+  transform: scale(1.1);
+}

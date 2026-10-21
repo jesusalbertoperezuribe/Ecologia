@@ -1,51 +1,248 @@
+/* R11: Botones y Estados Interactivos (BEM: .btn) */
 .btn {
-  padding: 0.75rem 1.5rem;
-  border-radius: 5px;
-  background: var(--color-primary);
-  color: #ffffff;
+  display: inline-block;
+  padding: 0.65rem 1.2rem;
+  border-radius: 6px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
   border: none;
+  font-weight: 600;
+  font-size: 0.9rem;
   cursor: pointer;
-  transition: background 0.3s;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.btn:hover {
-  background: var(--color-secondary);
+.btn:hover:not([disabled]) {
+  background-color: var(--color-secondary);
 }
 
+/* R12: Selector de Atributo [disabled] para Botones Sin Stock */
+.btn[disabled],
+button[disabled] {
+  background-color: #95a5a6;
+  color: #ecf0f1;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* R13: Buscador Estilizado con Selector de Atributo y :focus-visible */
+.buscador {
+  width: 100%;
+  max-width: 360px;
+}
+
+input[type="search"],
+.buscador__input {
+  width: 100%;
+  padding: 0.65rem 1rem;
+  margin-bottom: 0;
+  border: 2px solid var(--color-border);
+  border-radius: 8px;
+  background-color: var(--color-white);
+  font-size: 0.95rem;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+input[type="search"]:focus-visible,
+.buscador__input:focus-visible {
+  outline: none;
+  border-color: var(--color-secondary);
+  box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.25);
+}
+
+/* R14: Tarjeta de Producto (BEM: .tarjeta) y Combinador Hijo Directo > */
 .tarjeta {
   position: relative;
-  background: #ffffff;
+  background-color: var(--color-white);
   padding: 15px;
   border: 1px solid #e0e0e0;
   border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.tarjeta:hover {
+.tarjeta > .tarjeta__imagen,
+.tarjeta > img {
+  width: 100%;
+  height: 175px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.tarjeta > .tarjeta__cuerpo {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 0.45rem;
+}
+
+/* R15: Pseudoclases :hover y :not() - Eleva solo tarjetas disponibles */
+.tarjeta:not(.tarjeta--agotado):hover {
   transform: translateY(-5px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.09);
 }
 
+/* R16: Modificador .tarjeta--agotado (Semitransparente y sin elevación) */
+.tarjeta--agotado {
+  opacity: 0.6;
+}
+
+.tarjeta__nombre {
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+.tarjeta__descripcion {
+  font-size: 0.86rem;
+  color: var(--color-muted);
+}
+
+.tarjeta__precios {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: auto;
+  padding-top: 0.25rem;
+}
+
+.tarjeta__precio-actual,
+.precio {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--color-secondary);
+}
+
+.tarjeta--descuento .tarjeta__precio-actual {
+  color: #d35400;
+}
+
+.tarjeta__precio-anterior {
+  font-size: 0.85rem;
+  color: #888888;
+}
+
+/* R17: Etiquetas Superpuestas (Badges de Stock, Oferta y Agotado) */
+.tarjeta__etiqueta,
 .etiqueta-eco {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  background: var(--color-primary);
-  color: #ffffff;
-  padding: 4px 8px;
+  top: 22px;
+  left: 22px;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 4px 9px;
   border-radius: 4px;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  z-index: 2;
 }
 
+.tarjeta__etiqueta--oferta {
+  background-color: var(--color-warning);
+}
+
+.tarjeta__etiqueta--agotado {
+  background-color: #7f8c8d;
+}
+
+/* R18: Botón Favoritos 100% CSS con Combinador Hermano Adyacente (+) y :checked */
+.tarjeta__fav-check,
 .fav-checkbox {
   display: none;
 }
 
+.tarjeta__fav-label,
 .fav-label {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   color: #cccccc;
-  font-size: 1.5rem;
-  transition: color 0.3s;
+  font-size: 1.25rem;
+  z-index: 2;
+  transition: color 0.3s ease, transform 0.2s ease;
+  user-select: none;
 }
 
+.tarjeta__fav-label:hover,
+.fav-label:hover {
+  transform: scale(1.1);
+}
+
+.tarjeta__fav-check:checked + .tarjeta__fav-label,
 .fav-checkbox:checked + .fav-label {
-  color: #e74c3c;
+  color: var(--color-danger);
+}
+
+/* R19: Paginación Visual (BEM: .paginacion) */
+.paginacion {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.paginacion__enlace {
+  padding: 0.5rem 0.9rem;
+  border-radius: 6px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.paginacion__enlace:hover,
+.paginacion__enlace--activo {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  border-color: var(--color-secondary);
+}
+
+/* R20: Validación Visual de Formularios (:valid / :invalid) y Redes Sociales */
+input:required:invalid,
+textarea:required:invalid {
+  border: 2px solid var(--color-danger);
+}
+
+input:required:valid,
+textarea:required:valid {
+  border: 2px solid var(--color-primary);
+}
+
+.img-historia,
+.img-mapa {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 8px;
+  margin: 15px 0;
+}
+
+.tarjeta img.avatar-cliente,
+.carrusel .tarjeta img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.icono-red {
+  display: inline-block;
+  margin: 5px 10px;
+  color: var(--color-white);
+  transition: transform 0.3s ease;
+}
+
+.icono-red:hover {
+  transform: scale(1.1);
 }

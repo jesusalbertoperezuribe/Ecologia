@@ -7,76 +7,96 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
 </head>
 <body>
   <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="views/productos.html">Catálogo</a></li>
-        <li><a href="views/sobre-nosotros.html">Nosotros</a></li>
-        <li><a href="views/contacto.html">Contacto</a></li>
-      </ul>
-    </nav>
+    <div class="contenedor header-contenido">
+      <h2>🌱 EcoMarket</h2>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="views/productos.html">Catálogo</a></li>
+          <li><a href="views/sobre-nosotros.html">Nosotros</a></li>
+          <li><a href="views/contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <div>
+        <a href="views/productos.html">🔍 Buscar</a> |
+        <a href="views/productos.html">🛒 Carrito</a>
+      </div>
+    </div>
   </header>
 
   <main>
     <section class="hero">
-      <h1>Bienvenido a EcoMarket</h1>
-      <button class="btn">Ver Catálogo</button>
+      <h1>Compra responsable, vive sostenible</h1>
+      <p>Productos ecológicos y reutilizables para cuidar el planeta.</p>
+      <a href="views/productos.html" class="btn">Explorar productos</a>
     </section>
 
     <div class="categorias contenedor">
       <button class="btn">Bambú</button>
       <button class="btn">Hogar</button>
+      <button class="btn">Cuidado Personal</button>
+      <button class="btn">Cocina</button>
     </div>
 
     <section class="destacados contenedor">
       <h2>Productos Destacados</h2>
       <div class="grid-productos">
         <article class="tarjeta">
-          <img src="img/products/cepillo-bambu.jpg" alt="Cepillo de Dientes de Bambú">
-          <h3>Cepillo de Bambú</h3>
-          <p>Cepillo dental biodegradable con cerdas suaves libres de BPA.</p>
+          <img src="img/products/Cepillo de dientes de bambú.webp" alt="Cepillo de dientes de bambú">
+          <h3>Cepillo de dientes de bambú</h3>
+          <p>Cepillo biodegradable con cerdas suaves.</p>
+          <a href="views/productos.html" class="btn">Ver más</a>
         </article>
+
         <article class="tarjeta">
-          <img src="img/products/champu-solido.jpg" alt="Champú Sólido Natural">
-          <h3>Champú Sólido</h3>
-          <p>Barra artesanal con aceites esenciales orgánicos y cero plástico.</p>
+          <img src="img/products/Champú en barra.webp" alt="Champú en barra">
+          <h3>Champú en barra</h3>
+          <p>Champú sólido natural libre de envases plásticos.</p>
+          <a href="views/productos.html" class="btn">Ver más</a>
         </article>
+
         <article class="tarjeta">
-          <img src="img/products/botella-vidrio.jpg" alt="Botella de Vidrio Reutilizable">
-          <h3>Botella de Vidrio</h3>
-          <p>Botella térmica reutilizable con funda protectora de corcho natural.</p>
+          <img src="img/products/Termo o botella de agua de vidrio.jpg" alt="Termo o botella de agua de vidrio">
+          <h3>Termo o botella de agua de vidrio</h3>
+          <p>Botella reutilizable resistente con tapa de bambú.</p>
+          <a href="views/productos.html" class="btn">Ver más</a>
         </article>
+
         <article class="tarjeta">
-          <img src="img/products/bolsa-algodon.jpg" alt="Bolsa de Algodón Orgánico">
-          <h3>Bolsa de Algodón Orgánico</h3>
-          <p>Bolsa resistente tejida a mano ideal para tus compras diarias.</p>
+          <img src="img/products/Bolsas de malla de algodón.jpg" alt="Bolsas de malla de algodón">
+          <h3>Bolsas de malla de algodón</h3>
+          <p>Bolsas reutilizables para mercar frutas y verduras.</p>
+          <a href="views/productos.html" class="btn">Ver más</a>
         </article>
+
         <article class="tarjeta">
-          <img src="img/products/cubiertos-bambu.jpg" alt="Set de Cubiertos de Bambú">
-          <h3>Set de Cubiertos de Bambú</h3>
-          <p>Estuche portátil con tenedor, cuchillo, cuchara y pitillo reutilizable.</p>
+          <img src="img/products/Cubiertos de bambú para llevar.jpg" alt="Cubiertos de bambú para llevar">
+          <h3>Cubiertos de bambú para llevar</h3>
+          <p>Set de cubiertos ecológicos con estuche de tela.</p>
+          <a href="views/productos.html" class="btn">Ver más</a>
         </article>
+
         <article class="tarjeta">
-          <img src="img/products/esponja-luffa.jpg" alt="Esponja Vegetal de Luffa">
-          <h3>Esponja Vegetal Luffa</h3>
-          <p>Esponja 100% natural y compostable para el baño o la cocina.</p>
-        </article>
-        <article class="tarjeta">
-          <h3>Producto 5</h3>
-          <p>Descripción del producto ecológico 5.</p>
-        </article>
-        <article class="tarjeta">
-          <h3>Producto 6</h3>
-          <p>Descripción del producto ecológico 6.</p>
+          <img src="img/products/Envolturas de cera de abeja.jpg" alt="Envolturas de cera de abeja">
+          <h3>Envolturas de cera de abeja</h3>
+          <p>Tela encerada reutilizable para conservar alimentos.</p>
+          <a href="views/productos.html" class="btn">Ver más</a>
         </article>
       </div>
     </section>
   </main>
 
   <footer>
+    <p>EcoMarket &copy; 2026 - Contacto: info@ecomarket.com</p>
+    <div>
+      <a href="#" class="icono-red">📸 Instagram</a>
+      <a href="#" class="icono-red">📘 Facebook</a>
+      <a href="#" class="icono-red">💬 WhatsApp</a>
+    </div>
   </footer>
 </body>
 </html>

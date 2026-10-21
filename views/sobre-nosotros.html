@@ -7,28 +7,42 @@
   <link rel="stylesheet" href="../css/main.css">
   <link rel="stylesheet" href="../css/layout.css">
   <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/animations.css">
 </head>
 <body>
   <header>
-    <nav>
-      <ul>
-        <li><a href="../index.html">Inicio</a></li>
-        <li><a href="productos.html">Catálogo</a></li>
-        <li><a href="sobre-nosotros.html">Nosotros</a></li>
-        <li><a href="contacto.html">Contacto</a></li>
-      </ul>
-    </nav>
+    <div class="contenedor header-contenido">
+      <h2>🌱 EcoMarket</h2>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li><a href="productos.html">Catálogo</a></li>
+          <li><a href="sobre-nosotros.html">Nosotros</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <div>
+        <a href="productos.html">🔍 Buscar</a> |
+        <a href="productos.html">🛒 Carrito</a>
+      </div>
+    </div>
   </header>
 
   <main class="contenedor">
     <section class="sobre-nosotros">
-      <h1>Nuestra Misión Ecológica</h1>
-      <p>En EcoMarket trabajamos para acercar productos sostenibles, biodegradables y libres de plástico a cada hogar, promoviendo un consumo consciente que reduzca la huella ambiental en nuestro planeta.</p>
-      <p>Colaboramos directamente con productores locales y artesanos comprometidos con el comercio justo y el cuidado de la biodiversidad, asegurando que cada compra impulse un futuro más verde y limpio.</p>
+      <div class="historia">
+        <img src="../img/historia.jpg" alt="Misión EcoMarket" class="img-historia">
+        <div>
+          <h1>Nuestra Historia</h1>
+          <p>En EcoMarket trabajamos para acercar productos sostenibles, biodegradables y libres de plástico a cada hogar, promoviendo un consumo consciente que reduzca la huella ambiental en nuestro planeta.</p>
+          <p>Colaboramos directamente con productores locales y artesanos comprometidos con el comercio justo y el cuidado de la biodiversidad, asegurando que cada compra impulse un futuro más verde y limpio.</p>
+        </div>
+      </div>
+
       <ul class="valores">
-        <li>Sin plástico</li>
-        <li>Vegano</li>
-        <li>Justo</li>
+        <li>🌿 Sin plástico</li>
+        <li>🐰 Vegano</li>
+        <li>🤝 Comercio Justo</li>
       </ul>
     </section>
 
@@ -36,14 +50,22 @@
       <h2>Testimonios</h2>
       <div class="carrusel">
         <article class="tarjeta">
+          <img src="../img/cliente1.jpg" alt="Foto de María G." class="avatar-cliente">
+          <p>⭐⭐⭐⭐⭐</p>
           <p>"Excelentes productos ecológicos, el cepillo de bambú es de gran calidad."</p>
           <h4>- María G.</h4>
         </article>
+
         <article class="tarjeta">
+          <img src="../img/cliente2.jpg" alt="Foto de Carlos R." class="avatar-cliente">
+          <p>⭐⭐⭐⭐⭐</p>
           <p>"Me encanta que los envíos sean 100% libres de plástico. Súper recomendados."</p>
           <h4>- Carlos R.</h4>
         </article>
+
         <article class="tarjeta">
+          <img src="../img/cliente3.jpg" alt="Foto de Laura P." class="avatar-cliente">
+          <p>⭐⭐⭐⭐⭐</p>
           <p>"Por fin una tienda donde puedo comprar con confianza sabiendo que es comercio justo."</p>
           <h4>- Laura P.</h4>
         </article>
@@ -52,7 +74,12 @@
   </main>
 
   <footer>
+    <p>EcoMarket &copy; 2026 - Contacto: info@ecomarket.com</p>
+    <div>
+      <a href="#" class="icono-red">📸 Instagram</a>
+      <a href="#" class="icono-red">📘 Facebook</a>
+      <a href="#" class="icono-red">💬 WhatsApp</a>
+    </div>
   </footer>
 </body>
 </html>
-

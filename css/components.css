@@ -24,6 +24,24 @@
   transform: translateY(-5px);
 }
 
+.tarjeta img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.img-historia {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.tarjeta img.avatar-cliente,
+.carrusel .tarjeta img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
 .etiqueta-eco {
   position: absolute;
   top: 10px;
@@ -48,4 +66,25 @@
 
 .fav-checkbox:checked + .fav-label {
   color: #e74c3c;
+}
+
+input:required:invalid,
+textarea:required:invalid {
+  border: 2px solid #e74c3c;
+}
+
+input:required:valid,
+textarea:required:valid {
+  border: 2px solid var(--color-primary);
+}
+
+.icono-red {
+  display: inline-block;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: transform 0.3s;
+}
+
+.icono-red:hover {
+  transform: scale(1.1);
 }

@@ -24,6 +24,7 @@
   transform: translateY(-5px);
 }
 
+<<<<<<< HEAD
 .etiqueta-eco {
   position: absolute;
   top: 10px;
@@ -46,6 +47,35 @@
   transition: color 0.3s;
 }
 
+=======
+.tarjeta img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.etiqueta-eco {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: var(--color-primary);
+  color: #ffffff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.fav-checkbox {
+  display: none;
+}
+
+.fav-label {
+  cursor: pointer;
+  color: #cccccc;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+>>>>>>> feature/home
 .fav-checkbox:checked + .fav-label {
   color: #e74c3c;
 }

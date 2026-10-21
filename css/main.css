@@ -1,4 +1,4 @@
-/* R1: Variables Globales y Paleta Natural (:root) */
+/* Paleta global */
 :root {
   --color-primary: #2ecc71;
   --color-secondary: #27ae60;
@@ -7,28 +7,32 @@
   --color-text: #2c3e35;
   --color-muted: #5f6f65;
   --color-border: #dcdcd0;
-  --color-danger: #e74c3c;
+  --color-danger: #c0392b;
   --color-warning: #e67e22;
-  --font-base: sans-serif;
+  --font-base: Arial, Helvetica, sans-serif;
 }
 
-/* R2: Reseteo Universal con Box-Sizing */
+/* Reset global y reglas base compartidas */
 *,
 *::before,
 *::after {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  font-family: var(--font-base);
-  background-color: var(--color-bg);
-  color: var(--color-text);
-  line-height: 1.5;
+  min-width: 320px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-base);
+  line-height: 1.5;
 }
 
 main {
@@ -36,21 +40,20 @@ main {
 }
 
 a {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
 }
 
 img {
-  max-width: 100%;
   display: block;
+  max-width: 100%;
 }
 
 h1,
 h2,
-h3,
-h4 {
-  margin-bottom: 0.5rem;
+h3 {
   color: #1e2d24;
+  line-height: 1.25;
 }
 
 abbr[title] {

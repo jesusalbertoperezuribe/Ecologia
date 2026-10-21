@@ -1,20 +1,30 @@
-/* R21: Animación Keyframes Sutil para Etiqueta de '¡Oferta!' */
-@keyframes pulsoOferta {
+/* R2: Pulso discreto de la etiqueta promocional */
+@keyframes pulso-oferta {
   0%,
   100% {
     transform: scale(1);
   }
+
   50% {
-    transform: scale(1.08);
+    transform: scale(1.06);
   }
 }
 
 .tarjeta__etiqueta--oferta {
-  animation: pulsoOferta 1.8s infinite ease-in-out;
+  animation: pulso-oferta 1.8s ease-in-out infinite;
 }
 
-/* R22: Pausar Animación al Pasar el Cursor sobre la Tarjeta */
 .tarjeta:hover .tarjeta__etiqueta--oferta {
   animation-play-state: paused;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto;
+    animation-duration: 0.01ms;
+    animation-iteration-count: 1;
+    transition-duration: 0.01ms;
+  }
+}

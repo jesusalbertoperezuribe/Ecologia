@@ -39,3 +39,4 @@
 - **Catálogo**: `Mobile-20261019T123004Z-1-001/Mobile/sustainable_product_catalog.png`
 - **Nosotros**: `Mobile-20261019T123004Z-1-001/Mobile/ecomarket_brand_story.png`
 - **Contacto**: `Mobile-20261019T123004Z-1-001/Mobile/contact_&_support_screen.png`
+

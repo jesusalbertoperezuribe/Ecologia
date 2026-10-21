@@ -21,6 +21,17 @@
   background-color: var(--color-secondary);
 }
 
+.btn--secundario {
+  background-color: var(--color-white);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+}
+
+.btn--secundario:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+}
+
 /* Boton Deshabilitado con Selector de Atributo */
 .btn[disabled],
 button[disabled] {
@@ -49,7 +60,9 @@ input[type="search"],
 }
 
 input[type="search"]:focus-visible,
-.buscador__input:focus-visible {
+.buscador__input:focus-visible,
+a:focus-visible,
+button:focus-visible {
   outline: none;
   border-color: var(--color-secondary);
   box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.25);
@@ -71,9 +84,10 @@ input[type="search"]:focus-visible,
 .tarjeta > .tarjeta__imagen,
 .tarjeta > img {
   width: 100%;
-  height: 175px;
+  height: 185px;
   object-fit: cover;
   border-radius: 8px;
+  background-color: #f4f7f4;
 }
 
 .tarjeta > .tarjeta__cuerpo {
@@ -117,6 +131,7 @@ input[type="search"]:focus-visible,
   font-weight: 700;
   font-size: 1.05rem;
   color: var(--color-secondary);
+  margin-top: auto;
 }
 
 .tarjeta--descuento .tarjeta__precio-actual {
@@ -173,6 +188,7 @@ input[type="search"]:focus-visible,
   color: #cccccc;
   font-size: 1.25rem;
   z-index: 2;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12);
   transition: color 0.3s ease, transform 0.2s ease;
   user-select: none;
 }
@@ -228,16 +244,19 @@ textarea:required:valid {
 .img-historia,
 .img-mapa {
   width: 100%;
-  max-width: 500px;
+  max-width: 480px;
   border-radius: 8px;
-  margin: 15px 0;
+  margin: 0.5rem 0;
 }
 
 .tarjeta img.avatar-cliente,
 .carrusel .tarjeta img {
-  width: 70px;
-  height: 70px;
+  width: 75px;
+  height: 75px;
+  object-fit: contain;
   border-radius: 50%;
+  background-color: var(--color-bg);
+  padding: 6px;
 }
 
 .icono-red {
